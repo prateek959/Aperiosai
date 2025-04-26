@@ -23,8 +23,8 @@ const searchRetailer = async (req, res) => {
         const data = await Data.find(obj).skip(skip).limit(lim);
         res.status(200).json(data);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({ msg: "Internal Server error", error });
+        // console.log(error.message);
+        res.status(500).json({ msg: "Internal Server error" });
     }
 };
 
@@ -37,8 +37,8 @@ const retailerById = async (req, res) => {
         }
         res.status(200).json(data);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({ msg: "Internal Server error",error });
+        // console.log(error.message);
+        res.status(500).json({ msg: "Internal Server error" });
     }
 }
 
@@ -63,8 +63,8 @@ const addRetailers = async (req, res) => {
         });
         res.status(201).json({ msg: "Add data successfully" });
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({ msg: "Internal Server error", error});
+        // console.log(error.message);
+        res.status(500).json({ msg: "Internal Server error"});
     }
 };
 
